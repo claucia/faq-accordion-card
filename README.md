@@ -1,6 +1,8 @@
-# Web app template
+# Frontend Mentor: FAQ accordion card
 
-This is a web app template with [Parcel.js](https://parceljs.org/) suitable for most of my vanilla JavaScript projects.
+This is a Frontend Mentor project demonstranting a FAQ accordion card.
+
+It uses HTML, SCSS, vanilla JavaScript, and [Parcel.js](https://parceljs.org/) for building.
 
 ## Running the app for development
 
