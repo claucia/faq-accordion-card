@@ -1,3 +1,15 @@
 # Web app template
 
 This is a web app template with [Parcel.js](https://parceljs.org/) suitable for most of my vanilla JavaScript projects.
+
+## Running the app for development
+
+1. Run `npm install` to download the dependencies. The `node_modules` folder will be created.
+1. Run `npm run start` to start a server at `http://localhost:1234`.
+ - Files will be writen to the `dist` folder.
+ - Chrome will open a new tab, displaying the application.
+ - Code changes will be automatically reloaded.
+
+## Building the app
+
+Run `npm run build` to build the application. The application artifacts will be available in the `dist` folder.
