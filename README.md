@@ -9,7 +9,7 @@ This is a web app template with [Parcel.js](https://parceljs.org/) suitable for 
  - Parcel.js will build the applications and make the artifacts available in the `dist` folder.
  - The SCSS files will be automatically converted to CSS files.
  - Chrome will open a new tab, displaying the application.
- - As you develop, Parcel.js will watch for code changes, and the browser will reload the page.
+ - As you develop, Parcel.js will watch for code changes, and instruct the browser to reload the page. Like magic!
  - The contents of the `dist` folder are deleted by Parcel.js. So do not modify any files in the `dist` folder!
 
 ## Building the app
