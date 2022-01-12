@@ -29,21 +29,21 @@ body {
       min-height: 400px;
       position: relative;
 
-      .background,
-      .woman,
-      .box {
-        // height: 100%;
-        width: 800px;
-      }
-
-      .background {
-        overflow: hidden;
-        position: absolute;
+      .background-illustration-container,
+      .person-illustration-container,
+      .box-illustration-container {
         width: 100%;
         height: 100%;
-        > div {
+        > .illustration {
           width: 100%;
           height: 100%;
+        }
+      }
+
+      .background-illustration-container {
+        overflow: hidden;
+        position: absolute;
+        > .illustration {
           position: relative;
           background: url("./../images/bg-pattern-desktop.svg") no-repeat;
           background-position-x: -100px;
@@ -51,27 +51,26 @@ body {
           background-size: cover;
         }
       }
-      .woman {
+      .person-illustration-container {
         overflow: hidden;
         position: absolute;
-        width: 100%;
-        height: 100%;
-        > div {
-          width: 100%;
-          height: 100%;
+        > .illustration {
           position: relative;
           left: -80px;
           top: 80px;
           background: url("./../images/illustration-woman-online-desktop.svg") no-repeat;
         }
       }
-      .box {
-        position: absolute;
-        top: 215px;
-        left: -90px;
-        background: url("./../images/illustration-box-desktop.svg") no-repeat;
+      .box-illustration-container {
+        position: relative;
         width: 100%;
         height: 100%;
+        > .illustration {
+          position: absolute;
+          top: 215px;
+          left: -90px;
+          background: url("./../images/illustration-box-desktop.svg") no-repeat;
+        }
       }
     }
 
