@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow: hidden;
 }
 
 body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   min-height: 100vh;
-  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 14px;
+  color: hsl(238, 29%, 16%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,8 +26,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 20px 40px 0 hsl(250, 48%, 48%);
 
-    .card-image {
-      border: 1px solid blue;
+    .card-illustration {
       min-width: 500px;
       min-height: 400px;
       position: relative;
@@ -68,7 +70,7 @@ body {
         > .illustration {
           position: absolute;
           top: 215px;
-          left: -90px;
+          left: -93px;
           background: url("./../images/illustration-box-desktop.svg") no-repeat;
         }
       }
@@ -78,6 +80,42 @@ body {
       border: 1px solid red;
       display: flex;
       flex-direction: column;
+      padding: 60px 60px 60px 0px;
+
+      .question-and-answer-container {
+        padding: 15px 15px 15px 0px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+
+        > .question-container {
+          display: flex;
+
+          > .question {
+            flex-grow: 2;
+          }
+          > button {
+            background: url("./../images/icon-arrow-down.svg") no-repeat;
+            padding: 10px;
+            background-position-y: center;
+            background-position-x: center;
+            border: none;
+
+            &.expand {
+            }
+
+            &.collapse {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        > .answer {
+          &.hidden {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
