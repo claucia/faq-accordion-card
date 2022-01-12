@@ -100,18 +100,22 @@ body {
             background-position-y: center;
             background-position-x: center;
             border: none;
-
-            &.expand {
-            }
-
-            &.collapse {
-              transform: rotate(180deg);
-            }
           }
         }
 
-        > .answer {
-          &.hidden {
+        &.expanded {
+          button {
+            transform: rotate(180deg);
+          }
+          .answer {
+            display: block;
+          }
+          .question {
+            font-weight: 700;
+          }
+        }
+        &.collapsed {
+          .answer {
             display: none;
           }
         }
