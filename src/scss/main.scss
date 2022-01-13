@@ -25,7 +25,6 @@ body {
 
   .card-illustration {
     flex: 1;
-
     position: relative;
 
     .background-illustration-container,
@@ -45,9 +44,8 @@ body {
       > .illustration {
         position: relative;
         background: url("./../images/bg-pattern-desktop.svg") no-repeat;
-        background-position-x: -100px;
-        background-position-y: 50px;
-        background-size: cover;
+        background-position-x: 111%;
+        background-position-y: 68%;
       }
     }
     .person-illustration-container {
@@ -74,10 +72,6 @@ body {
         left: -19%;
         background: url("./../images/illustration-box-desktop.svg") no-repeat;
         background-size: 40%;
-        transform: translatex(-50%);
-        transform: translatey(10px);
-        // width: 191px;
-        // height: 184px;
       }
     }
   }
@@ -86,7 +80,7 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
-    // padding: 60px;
+    padding: 45px;
     padding-left: 0;
 
     > h1 {
