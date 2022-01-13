@@ -1,7 +1,7 @@
-const questionContainer = document.querySelectorAll(".question-container");
+const questionContainers = document.querySelectorAll(".question-container");
 
-for (let i = 0; i < questionContainer.length; i++) {
-  questionContainer[i].onclick = showAnswer;
+for (let i = 0; i < questionContainers.length; i++) {
+  questionContainers[i].onclick = showAnswer;
 }
 
 function showAnswer(event) {
