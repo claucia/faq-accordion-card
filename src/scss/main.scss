@@ -8,136 +8,161 @@
 }
 
 body {
-  background: linear-gradient($background-color-1, $background-color-2);
-  min-height: 100vh;
+  background: linear-gradient($background-color-1, $background-color-2) fixed;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 14px;
   color: $text-color;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
+  background-color: $card-background-color;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px 0 $shadow-color;
 
-  .card {
-    display: flex;
-    max-width: 900px;
-    min-height: 507px;
-    margin: auto;
-    background-color: $card-background-color;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px 0 $shadow-color;
+  .card-illustration {
+    flex: 1;
 
-    .card-illustration {
-      min-width: 500px;
-      min-height: 400px;
-      position: relative;
+    position: relative;
 
-      .background-illustration-container,
-      .person-illustration-container,
-      .box-illustration-container {
+    .background-illustration-container,
+    .person-illustration-container,
+    .box-illustration-container {
+      width: 100%;
+      height: 100%;
+      > .illustration {
         width: 100%;
         height: 100%;
-        > .illustration {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .background-illustration-container {
-        overflow: hidden;
-        position: absolute;
-        > .illustration {
-          position: relative;
-          background: url("./../images/bg-pattern-desktop.svg") no-repeat;
-          background-position-x: -100px;
-          background-position-y: 50px;
-          background-size: cover;
-        }
-      }
-      .person-illustration-container {
-        overflow: hidden;
-        position: absolute;
-        > .illustration {
-          position: relative;
-          left: -80px;
-          top: 80px;
-          background: url("./../images/illustration-woman-online-desktop.svg") no-repeat;
-        }
-      }
-      .box-illustration-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        > .illustration {
-          position: relative;
-          top: 215px;
-          left: -93px;
-          background: url("./../images/illustration-box-desktop.svg") no-repeat;
-          width: 191px;
-          height: 184px;
-        }
       }
     }
 
-    .card-questions {
+    .background-illustration-container {
+      overflow: hidden;
+      position: absolute;
+      > .illustration {
+        position: relative;
+        background: url("./../images/bg-pattern-desktop.svg") no-repeat;
+        background-position-x: -100px;
+        background-position-y: 50px;
+        background-size: cover;
+      }
+    }
+    .person-illustration-container {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      > .illustration {
+        position: relative;
+        left: -80px;
+        top: 50%;
+        transform: translatey(-35%);
+        background: url("./../images/illustration-woman-online-desktop.svg") no-repeat;
+        background-size: 100%;
+      }
+    }
+    .box-illustration-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      > .illustration {
+        position: relative;
+        top: 39%;
+        left: -19%;
+        background: url("./../images/illustration-box-desktop.svg") no-repeat;
+        background-size: 40%;
+        transform: translatex(-50%);
+        transform: translatey(10px);
+        // width: 191px;
+        // height: 184px;
+      }
+    }
+  }
+
+  .card-questions {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // padding: 60px;
+    padding-left: 0;
+
+    > h1 {
+      padding: 15px 0px;
+      font-weight: 700;
+    }
+
+    .question-and-answer-container {
+      padding: 15px 15px 15px 0px;
       display: flex;
       flex-direction: column;
-      padding: 60px 60px 60px 0px;
+      border-bottom: 1px solid $dividers-color;
 
-      > h1 {
-        padding: 15px 0px;
-        font-weight: 700;
+      > .question-container {
+        display: flex;
+
+        > .question {
+          flex-grow: 2;
+        }
+        > .question:hover {
+          color: $text-hover-color;
+          cursor: pointer;
+        }
+
+        > button {
+          background: url("./../images/icon-arrow-down.svg") no-repeat;
+          padding: 10px;
+          background-position-y: center;
+          background-position-x: center;
+          border: none;
+        }
       }
 
-      .question-and-answer-container {
-        padding: 15px 15px 15px 0px;
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid $dividers-color;
-        width: 337px;
-
-        > .question-container {
-          display: flex;
-
-          > .question {
-            flex-grow: 2;
-          }
-          > .question:hover {
-            color: $text-hover-color;
-            cursor: pointer;
-          }
-
-          > button {
-            background: url("./../images/icon-arrow-down.svg") no-repeat;
-            padding: 10px;
-            background-position-y: center;
-            background-position-x: center;
-            border: none;
-          }
+      &.expanded {
+        button {
+          transform: rotate(180deg);
         }
-
-        &.expanded {
-          button {
-            transform: rotate(180deg);
-          }
-          .answer {
-            display: block;
-          }
-          .question {
-            font-weight: 700;
-          }
+        .answer {
+          display: block;
         }
-        &.collapsed {
-          .answer {
-            display: none;
-          }
+        .question {
+          font-weight: 700;
+        }
+      }
+      &.collapsed {
+        .answer {
+          display: none;
         }
       }
     }
   }
 }
 
-//  @media screen and (max-width: $small) {
-//     //do Smth
-//   }
-//   @media screen and (min-width: $medium) {
+@media only screen and (max-width: $mobile) {
+  * {
+    color: red;
+  }
+  .card {
+    flex-direction: column;
+    margin: 15px;
+    width: 100%;
+    .card-questions {
+      padding: 15px;
+    }
+  }
+}
+@media only screen and (min-width: $mobile) {
+  * {
+    color: blue;
+  }
+  .card {
+    flex-direction: row;
+    max-width: 900px;
+    min-height: 507px;
+    .card-illustration {
+      // min-width: 500px;
+    }
+  }
+}
