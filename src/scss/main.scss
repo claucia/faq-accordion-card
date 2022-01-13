@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "config";
 
 * {
   margin: 0;
@@ -7,11 +8,11 @@
 }
 
 body {
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background: linear-gradient($background-color-1, $background-color-2);
   min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 14px;
-  color: hsl(238, 29%, 16%);
+  color: $text-color;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,9 +23,9 @@ body {
     max-width: 900px;
     min-height: 507px;
     margin: auto;
-    background-color: white;
+    background-color: $card-background-color;
     border-radius: 30px;
-    box-shadow: 0 20px 40px 0 hsl(250, 48%, 48%);
+    box-shadow: 0 20px 40px 0 $shadow-color;
 
     .card-illustration {
       min-width: 500px;
@@ -79,16 +80,21 @@ body {
     }
 
     .card-questions {
-      border: 1px solid red;
       display: flex;
       flex-direction: column;
       padding: 60px 60px 60px 0px;
+
+      > h1 {
+        padding: 15px 0px;
+        font-weight: 700;
+      }
 
       .question-and-answer-container {
         padding: 15px 15px 15px 0px;
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid hsl(240, 5%, 91%);
+        border-bottom: 1px solid $dividers-color;
+        width: 337px;
 
         > .question-container {
           display: flex;
@@ -97,7 +103,7 @@ body {
             flex-grow: 2;
           }
           > .question:hover {
-            color: hsl(14, 88%, 65%);
+            color: $text-hover-color;
             cursor: pointer;
           }
 
@@ -130,3 +136,8 @@ body {
     }
   }
 }
+
+//  @media screen and (max-width: $small) {
+//     //do Smth
+//   }
+//   @media screen and (min-width: $medium) {
