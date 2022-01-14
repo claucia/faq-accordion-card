@@ -66,6 +66,7 @@ body {
         display: flex;
 
         > .question {
+          transition: color 0.5s;
           flex-grow: 2;
         }
         > .question:hover {
@@ -79,7 +80,12 @@ body {
           background-position-y: center;
           background-position-x: center;
           border: none;
+          transition: 0.5s ease;
         }
+      }
+
+      .answer {
+        transition: all 0.5s linear;
       }
 
       &.expanded {
@@ -88,6 +94,8 @@ body {
         }
         .answer {
           display: block;
+          height: auto;
+          opacity: 1;
         }
         .question {
           font-weight: 700;
@@ -95,7 +103,9 @@ body {
       }
       &.collapsed {
         .answer {
-          display: none;
+          overflow: hidden;
+          height: 0;
+          opacity: 0;
         }
       }
     }
@@ -103,10 +113,6 @@ body {
 }
 
 @media only screen and (max-width: $small-devices) {
-  * {
-    color: red;
-  }
-
   .card {
     width: 90%;
     min-width: calc($small-devices - 200px);
@@ -167,10 +173,6 @@ body {
 }
 
 @media only screen and (min-width: $small-devices) and (max-width: $desktop-devices) {
-  * {
-    color: green;
-  }
-
   .card {
     width: 90%;
     flex-direction: column;
@@ -233,9 +235,6 @@ body {
 }
 
 @media only screen and (min-width: $desktop-devices) {
-  * {
-    color: blue;
-  }
   .card {
     width: 1000px;
     flex-direction: row;
