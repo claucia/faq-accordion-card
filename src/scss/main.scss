@@ -8,17 +8,16 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient($background-color-1, $background-color-2) fixed;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 14px;
   color: $text-color;
   min-height: 100vh;
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .card {
@@ -109,7 +108,7 @@ body {
   }
 
   .card {
-    min-width: 250px;
+    width: 450px;
     flex-direction: column;
     margin-top: 125px;
 
@@ -172,7 +171,7 @@ body {
   }
 
   .card {
-    min-width: 250px;
+    width: 500px;
     flex-direction: column;
     margin-top: 125px;
 

@@ -21,3 +21,14 @@ Run `npm run build` to build the application. The application artifacts will be 
 ## Deploying the app in GitHub pages
 
 Run `npm run deploy` to build and deploy the application. The application artifacts will be available in the `dist` folder, and then copied to the `gh-pages` branch. This branch will be used by GitHub Pages to make the static content available in the web.
+
+
+
+/////// text to be improved before push to Github ////////
+# Learnings:
+
+## Element.closest()
+The closest() method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.
+```JavaScript
+var closestElement = targetElement.closest(selectors);
+```
