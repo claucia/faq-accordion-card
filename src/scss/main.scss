@@ -120,6 +120,7 @@ body {
   }
 
   .card {
+    min-width: 250px;
     flex-direction: column;
 
     .card-illustration {
