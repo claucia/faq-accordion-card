@@ -14,6 +14,11 @@ body {
   color: $text-color;
   min-height: 100vh;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -22,57 +27,32 @@ body {
   background-color: $card-background-color;
   border-radius: 30px;
   box-shadow: 0 20px 40px 0 $shadow-color;
+  margin: 15px;
 
-  .card-illustration {
-    flex: 1;
-    position: relative;
-
-    .background-illustration-container,
-    .person-illustration-container,
-    .box-illustration-container {
+  .background-illustration-container,
+  .person-illustration-container,
+  .box-illustration-container {
+    width: 100%;
+    height: 100%;
+    > .illustration {
       width: 100%;
       height: 100%;
-      > .illustration {
-        width: 100%;
-        height: 100%;
-      }
     }
+  }
 
-    .background-illustration-container {
-      overflow: hidden;
-      position: absolute;
-      > .illustration {
-        position: relative;
-        background: url("./../images/bg-pattern-desktop.svg") no-repeat;
-        background-position-x: 111%;
-        background-position-y: 68%;
-      }
+  .background-illustration-container {
+    > .illustration {
+      background: url("./../images/bg-pattern-desktop.svg") no-repeat;
     }
-    .person-illustration-container {
-      overflow: hidden;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      > .illustration {
-        position: relative;
-        left: -80px;
-        top: 50%;
-        transform: translatey(-35%);
-        background: url("./../images/illustration-woman-online-desktop.svg") no-repeat;
-        background-size: 100%;
-      }
+  }
+  .person-illustration-container {
+    > .illustration {
+      background: url("./../images/illustration-woman-online-desktop.svg") no-repeat;
     }
-    .box-illustration-container {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      > .illustration {
-        position: relative;
-        top: 39%;
-        left: -19%;
-        background: url("./../images/illustration-box-desktop.svg") no-repeat;
-        background-size: 40%;
-      }
+  }
+  .box-illustration-container {
+    > .illustration {
+      background: url("./../images/illustration-box-desktop.svg") no-repeat;
     }
   }
 
@@ -138,12 +118,49 @@ body {
   * {
     color: red;
   }
+
   .card {
     flex-direction: column;
-    margin: 15px;
-    width: 100%;
+
+    .card-illustration {
+      height: 100px;
+      position: relative;
+      width: 100%;
+
+      .background-illustration-container,
+      .person-illustration-container,
+      .box-illustration-container {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      .background-illustration-container {
+        top: -110px;
+        .illustration {
+          background-size: 200px;
+        }
+      }
+
+      .person-illustration-container {
+        top: -90px;
+        .illustration {
+          background-size: 200px;
+        }
+      }
+
+      .box-illustration-container {
+        .illustration {
+          background-size: 70px;
+        }
+      }
+    }
     .card-questions {
       padding: 15px;
+      display: flex;
     }
   }
 }
@@ -153,10 +170,36 @@ body {
   }
   .card {
     flex-direction: row;
-    max-width: 900px;
+    width: 900px;
     min-height: 507px;
+
     .card-illustration {
-      // min-width: 500px;
+      position: relative;
+      flex: 1;
+    }
+
+    .background-illustration-container {
+      overflow: hidden;
+      position: absolute;
+      > .illustration {
+        position: relative;
+      }
+    }
+
+    .person-illustration-container {
+      overflow: hidden;
+      position: absolute;
+      > .illustration {
+        position: relative;
+        left: -80px;
+        top: 50%;
+      }
+      .box-illustration-container {
+        position: absolute;
+        > .illustration {
+          position: relative;
+        }
+      }
     }
   }
 }
