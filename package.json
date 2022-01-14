@@ -1,7 +1,10 @@
 {
   "name": "faq-accordion-card",
   "description": "Frontend Mentor: FAQ accordion card",
-  "author": "Claucia Cambruzzi",
+  "author": {
+    "name": "Claucia Cambruzzi",
+    "url": "https://claucia.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/claucia/faq-accordion-card"
