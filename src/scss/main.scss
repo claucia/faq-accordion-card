@@ -29,17 +29,6 @@ body {
   box-shadow: 0 20px 40px 0 $shadow-color;
   margin: 15px;
 
-  .background-illustration-container,
-  .person-illustration-container,
-  .box-illustration-container {
-    width: 100%;
-    height: 100%;
-    > .illustration {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
   .background-illustration-container {
     > .illustration {
       background: url("./../images/bg-pattern-desktop.svg") no-repeat;
@@ -122,6 +111,7 @@ body {
   .card {
     min-width: 250px;
     flex-direction: column;
+    margin-top: 125px;
 
     .card-illustration {
       height: 100px;
@@ -142,6 +132,8 @@ body {
       .background-illustration-container {
         top: -110px;
         .illustration {
+          width: 200px;
+          height: 200px;
           background-size: 200px;
         }
       }
@@ -149,12 +141,16 @@ body {
       .person-illustration-container {
         top: -90px;
         .illustration {
+          width: 200px;
+          height: 200px;
           background-size: 200px;
         }
       }
 
       .box-illustration-container {
         .illustration {
+          width: 70px;
+          height: 70px;
           background-size: 70px;
         }
       }
@@ -172,33 +168,54 @@ body {
   .card {
     flex-direction: row;
     width: 900px;
-    min-height: 507px;
 
     .card-illustration {
       position: relative;
       flex: 1;
-    }
+      min-height: 500px;
 
-    .background-illustration-container {
-      overflow: hidden;
-      position: absolute;
-      > .illustration {
-        position: relative;
+      .background-illustration-container,
+      .person-illustration-container,
+      .box-illustration-container {
+        position: absolute;
       }
-    }
 
-    .person-illustration-container {
-      overflow: hidden;
-      position: absolute;
-      > .illustration {
-        position: relative;
-        left: -80px;
-        top: 50%;
+      .background-illustration-container {
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        > .illustration {
+          position: relative;
+          background-size: 450px;
+          left: -80px;
+          top: 50px;
+          width: 450px;
+          height: 100%;
+        }
       }
+
+      .person-illustration-container {
+        overflow: hidden;
+        position: absolute;
+        > .illustration {
+          position: relative;
+          left: -80px;
+          top: 90px;
+          background-size: 450px;
+          width: 450px;
+          height: 450px;
+        }
+      }
+
       .box-illustration-container {
         position: absolute;
         > .illustration {
           position: relative;
+          left: -82px;
+          top: 222px;
+          background-size: 170px;
+          width: 170px;
+          height: 170px;
         }
       }
     }
