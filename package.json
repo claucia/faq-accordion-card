@@ -12,6 +12,6 @@
   "scripts": {
     "start": "parcel --open chrome",
     "build": "parcel build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "parcel build --public-url /faq-accordion-card && gh-pages -d dist"
   }
 }
