@@ -184,13 +184,14 @@ body {
         overflow: hidden;
         position: absolute;
         height: 100%;
+        width: 100%;
         > .illustration {
           position: relative;
-          background-size: 450px;
-          left: -80px;
-          top: 50px;
-          width: 450px;
-          height: 100%;
+          background-size: 950px;
+          width: 950px;
+          height: 1900px;
+          left: -580px;
+          top: -270px;
         }
       }
 
