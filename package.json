@@ -1,14 +1,11 @@
 {
-  "name": "faq-accordion-card",
+  "name": "frontend-mentor-faq-accordion-card",
   "description": "Frontend Mentor: FAQ accordion card",
   "author": {
     "name": "Claucia Cambruzzi",
     "url": "https://claucia.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/claucia/faq-accordion-card"
-  },
+  "private": true,
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.1.1",
     "@parcel/transformer-sass": "^2.1.1",
@@ -21,6 +18,6 @@
     "start": "parcel --open chrome",
     "prebuild": "rm -rf dist",
     "build": "parcel build",
-    "deploy": "npm run build -- --public-url /faq-accordion-card && gh-pages -d dist"
+    "deploy": "npm run build -- --public-url /frontend-mentor-faq-accordion-card && gh-pages -d dist"
   }
 }
