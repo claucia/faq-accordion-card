@@ -1,6 +1,6 @@
 # Frontend Mentor: FAQ accordion card
 
-This is a Frontend Mentor project demonstranting a FAQ accordion card.
+This is a Frontend Mentor project demonstrating a FAQ accordion card.
 
 It uses HTML, SCSS, vanilla JavaScript, and [Parcel.js](https://parceljs.org/) for building.
 
