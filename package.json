@@ -16,6 +16,6 @@
   "scripts": {
     "start": "parcel --open chrome",
     "prebuild": "rm -rf dist",
-    "build": "parcel build --public-url /frontend-mentor-faq-accordion-card"
+    "build": "parcel build --public-url ./"
   }
 }
