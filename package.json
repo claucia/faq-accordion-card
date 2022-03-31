@@ -16,6 +16,6 @@
   "scripts": {
     "start": "parcel --open chrome",
     "prebuild": "rm -rf dist",
-    "build": "parcel build"
+    "build": "parcel build --public-url ."
   }
 }
