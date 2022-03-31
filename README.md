@@ -17,8 +17,3 @@ It uses HTML, SCSS, vanilla JavaScript, and [Parcel.js](https://parceljs.org/) f
 ## Building the app
 
 Run `npm run build` to build the application. The application artifacts will be available in the `dist` folder.
-
-## Deploying the app in GitHub Pages
-
-1. Run `npm run deploy` to build and deploy the application in GitHub Pages. The application artifacts will be available in the `dist` folder, and then copied to the `gh-pages` branch.
-1. Push the changes to GitHub. The `gh-pages` branch will be used by GitHub Pages to make the static content available in the web.
